@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import PacmanLoader from "react-spinners/PacmanLoader";
+import News from "./News";
+import "./Search.css";
 
 export default function Search() {
   let [data, setData] = useState(null);
@@ -14,17 +16,20 @@ export default function Search() {
     setLoaded(true);
   }
   function handleResponse(response) {
-    console.log(response.data);
     setData(response.data);
   }
   if (loaded) {
-    return "Hello";
-  } else {
     return (
       <div>
-        <h4>Loading...</h4>
-
-        <PacmanLoader color="#36d7b7" />
+        <News data={data} />
+      </div>
+    );
+  } else {
+    searchNews();
+    return (
+      <div className="Search">
+        <h3>Loading...</h3>
+        <PacmanLoader color="#FFCE08" size={50} className="pacman" />
       </div>
     );
   }
