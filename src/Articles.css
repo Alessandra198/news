@@ -1,12 +1,28 @@
 .Articles .row {
-    margin: 10px;
+  margin: 10px;
+  padding: 10px;
+  background-color: antiquewhite;
+  border-radius: 10px;
 }
 
 .Articles p {
-    margin: 0;
-    line-height: 1;
+  margin: 0;
+  line-height: 1;
 }
 
 .Articles img {
-    border-radius: 10px;
+  border-radius: 10px;
+}
+
+@media (max-width: 576px) {
+  .Articles h6,
+  p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 770px) {
+  .Articles img {
+    margin: 10px auto 5px auto;
+  }
 }

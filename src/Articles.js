@@ -6,11 +6,11 @@ export default function Articles(props) {
     return (
       <div className="Articles">
         <div className="row">
-          <div className="col-6">
+          <div className="col-md-6">
             <h6>{props.element.headline}</h6>
             <p>{props.element.summary}</p>
           </div>
-          <div className="col-6">
+          <div className="col-md-6">
             {" "}
             <a href={props.element.url}>
               <img
