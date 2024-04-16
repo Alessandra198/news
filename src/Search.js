@@ -1,14 +1,31 @@
 import React, { useState } from "react";
 import axios from "axios";
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 export default function Search() {
-  let apiKey = "cofd1t9r01qk1gt8dkpgcofd1t9r01qk1gt8dkq0";
-  let apiUrl = `https://finnhub.io/api/v1/news?category=general&token=${apiKey}`;
+  let [data, setData] = useState(null);
+  let [loaded, setLoaded] = useState(false);
 
-  axios.get(apiUrl).then(handleResponse);
+  function searchNews() {
+    let apiKey = "cofd1t9r01qk1gt8dkpgcofd1t9r01qk1gt8dkq0";
+    let apiUrl = `https://finnhub.io/api/v1/news?category=general&token=${apiKey}`;
 
-  function handleResponse(response) {
-    console.log(response);
+    axios.get(apiUrl).then(handleResponse);
+    setLoaded(true);
   }
-  return "Hello";
+  function handleResponse(response) {
+    console.log(response.data);
+    setData(response.data);
+  }
+  if (loaded) {
+    return "Hello";
+  } else {
+    return (
+      <div>
+        <h4>Loading...</h4>
+
+        <PacmanLoader color="#36d7b7" />
+      </div>
+    );
+  }
 }
