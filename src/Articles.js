@@ -15,7 +15,7 @@ export default function Articles(props) {
             <a href={props.element.url}>
               <img
                 src={props.element.image}
-                alt="article image"
+                alt="article"
                 className="img-fluid"
               />
             </a>
