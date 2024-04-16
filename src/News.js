@@ -1,4 +1,5 @@
 import React from "react";
+import Articles from "./Articles";
 
 export default function News(props) {
   console.log(props.data);
@@ -8,9 +9,7 @@ export default function News(props) {
         {props.data.map(function (element, index) {
           return (
             <div key={index}>
-              <h4>{element.headline}</h4>
-              <p>{element.summary} </p>
-              <a href={element.url}>Click here for more info</a>
+              <Articles element={element} />
             </div>
           );
         })}

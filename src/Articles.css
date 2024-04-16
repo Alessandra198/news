@@ -1,0 +1,12 @@
+.Articles .row {
+    margin: 10px;
+}
+
+.Articles p {
+    margin: 0;
+    line-height: 1;
+}
+
+.Articles img {
+    border-radius: 10px;
+}
