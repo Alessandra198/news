@@ -15,12 +15,14 @@ export default function Search() {
     axios.get(apiUrl).then(handleResponse);
     setLoaded(true);
   }
+  
   function handleResponse(response) {
     setData(response.data);
   }
+
   if (loaded) {
     return (
-      <div>
+      <div className="Search">
         <News data={data} />
       </div>
     );

@@ -5,13 +5,8 @@
   box-shadow: 5px 5px 5px rgba(5, 28, 90, 0.3);
   border-radius: 10px;
   font-family: "Roboto", sans-serif;
-  transition: all 200ms ease-in-out;
 }
 
-.Articles .row:hover {
-  scale: 1.05;
-  cursor: pointer;
-}
 
 .Articles h6 {
   font-weight: bold;
@@ -30,6 +25,7 @@
 }
 
 .Articles img:hover {
+  scale: 1.05;
   opacity: 80%;
 }
 

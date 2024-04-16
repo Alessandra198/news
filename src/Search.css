@@ -1,8 +1,12 @@
+.Search {
+  font-family: "Roboto", sans-serif;
+}
+
 .Search h3 {
-    text-align: center;
+  text-align: center;
 }
 
 .Search .pacman {
-    display: block;
-    margin: 30px auto;
+  display: block;
+  margin: 30px auto;
 }
