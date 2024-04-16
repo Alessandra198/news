@@ -30,8 +30,11 @@
 }
 
 @media (max-width: 576px) {
-  .Articles h6,
-  p {
+  .Articles h6 {
+    font-size: 13px;
+  }
+
+  .Articles p {
     font-size: 13px;
   }
 }
